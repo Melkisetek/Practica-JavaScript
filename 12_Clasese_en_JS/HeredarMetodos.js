@@ -1,0 +1,1 @@
+// Heredar métodos en JS
