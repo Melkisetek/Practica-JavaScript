@@ -1,1 +1,1 @@
-// Heredar métodos en JS
+// Heredar métodos en JS 21
