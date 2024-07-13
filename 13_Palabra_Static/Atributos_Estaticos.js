@@ -1,0 +1,1 @@
+// Atributos estáticos en JS
