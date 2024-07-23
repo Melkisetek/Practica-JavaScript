@@ -18,16 +18,13 @@ class Persona{
         }
     }
 
-    
-
-
     get nombre(){
         return this._nombre;
     }
 
     set nombre(nombre){
-        this._nombre = nombre;
-    }
+         this._nombre = nombre;
+     }
 
     get apellido(){
         return this._apellido;
@@ -51,7 +48,7 @@ class Persona{
 // Una clase hija
 class Empleado extends Persona {
     constructor(nombre, apellido, departamento) {
-      super(nombre, apellido); // llamar al constructor de la clase padre
+      super(nombre , apellido); // llamar al constructor de la clase padre
       this._departamento = departamento;
     }
   
@@ -72,9 +69,9 @@ class Empleado extends Persona {
 
   // un máximo de 5 objetos 
   let persona1 = new Persona('Marvin', 'Carvajal');
-  let persona2 = new Persona('Alicia', 'Max');
-  let persona3 = new Persona('Kevin', 'Mikt');
-  let persona4 = new Persona('Laura', 'Ochoa');
-  let persona5 = new Persona('Dani', 'Ceballos');
-  
-  console.log(persona5.toString());
+//   let persona2 = new Persona('Alicia', 'Max');
+//   let persona3 = new Persona('Kevin', 'Mikt');
+//   let persona4 = new Persona('Laura', 'Ochoa');
+//   let persona5 = new Persona('Dani', 'Ceballos');
+  let empleado1 = new Empleado('menk', 'menma', 89);
+  console.log(empleado1.toString());
