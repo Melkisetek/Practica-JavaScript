@@ -3,7 +3,7 @@ class Persona{
     static contadorPersonas = 0;
 
     constructor(nombre, apellido, edad){
-        this._idPersonas = ++Persona.contadorPersonas;
+        this._idPersonas = ++ Persona.contadorPersonas;
         this._nombre = nombre;
         this._apellido = apellido;
         this._edad = edad;
@@ -38,7 +38,10 @@ class Persona{
     
     //toString
     toString(){
-        return this._nombre+' '+this._apellido+' '+this._edad;
+        return `${this._idPersonas}
+                 ${this._nombre} 
+                 ${this._apellido} 
+                 ${this._edad}`;
     }
 
 }
@@ -46,8 +49,7 @@ class Persona{
 //clase empleado
 class Empleado extends Persona{
     static contadorEmpleados = 0;
-    constructor(nombre, apellido, edad, sueldo){
-        super(nombre, apellido, edad)
+    constructor(sueldo){
         this._idEmpleado = ++Empleado.contadorEmpleados;
         this._sueldo = sueldo;
     }
@@ -67,17 +69,18 @@ class Empleado extends Persona{
     }
 
     toString(){
-        return this._idEmpleado+' '+super.toString()+' '+this._sueldo;
+        return `${super.toString()} 
+                ${this._idEmpleado}
+                ${this._sueldo}`;
     }
 }
 
 //clase Cliente
 class Cliente extends Persona{
-    static contadorCliente = 0;
-    constructor(nombre, apellido, edad, fechaRegistro){
-        super(nombre, apellido, edad)
-        this._idCliente = ++Cliente.contadorCliente;
-        this._fechRegistro = new Date();
+    static contadorClientes = 0;
+    constructor(fechaRegistro){
+        this._idCliente = ++Cliente.contadorClientes;
+        this._fechaRegistro = fechaRegistro;
     }
 
     get idCliente(){
@@ -85,27 +88,16 @@ class Cliente extends Persona{
     }
 
     get fechaRegistro(){
-        return this._fechRegistro;
+        return this._fechaRegistro;
     }
 
     set fechaRegistro(fechaRegistro){
-        this._fechRegistro = fechaRegistro;
+        this._fechaRegistro = fechaRegistro;
     }
 
     toString(){
-        return this._idCliente+' '+super.toString()+' '+this._fechRegistro;
+        return `${super.toString()} 
+                ${this._idCliente} 
+                ${this._fechaRegistro}`;
     }
 }
-
-let empleado1 = new Empleado('carlos', 'Mora', 23, 1500);
-console.log(empleado1.toString());
-
-let empleado2 = new Empleado('Mario', 'Ozil', 33, 6000);
-console.log(empleado2.toString());
-
-//cliente
-let cliente1 = new Cliente('Ana', 'Perreira', 44 );
-console.log(cliente1.toString()) 
-
-let cliente2 = new Cliente('Manuel', 'Esparta', 25 );
-console.log(cliente2.toString())
