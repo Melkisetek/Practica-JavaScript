@@ -49,7 +49,8 @@ class Persona{
 //clase empleado
 class Empleado extends Persona{
     static contadorEmpleados = 0;
-    constructor(sueldo){
+    constructor(nombre, apellido, edad, sueldo){
+        super(nombre, apellido, edad);
         this._idEmpleado = ++Empleado.contadorEmpleados;
         this._sueldo = sueldo;
     }
@@ -78,7 +79,8 @@ class Empleado extends Persona{
 //clase Cliente
 class Cliente extends Persona{
     static contadorClientes = 0;
-    constructor(fechaRegistro){
+    constructor(nombre, apellido, edad, fechaRegistro){
+        super(nombre, apellido, edad);
         this._idCliente = ++Cliente.contadorClientes;
         this._fechaRegistro = fechaRegistro;
     }
@@ -101,3 +103,14 @@ class Cliente extends Persona{
                 ${this._fechaRegistro}`;
     }
 }
+
+//Prueba clase Persona
+let persona1 = new Persona('Juan', 'Perez', 34);
+console.log(persona1.toString());
+
+let empleado1 = new Empleado('Moises', 'Hernandez', 36, 6800);
+console.log(empleado1.toString());
+
+//Cliente
+let cliente1 = new Cliente('Raul', 'Quiñonez', 45, new Date());
+console.log(cliente1.toString());
