@@ -114,3 +114,6 @@ console.log(empleado1.toString());
 //Cliente
 let cliente1 = new Cliente('Raul', 'Quiñonez', 45, new Date());
 console.log(cliente1.toString());
+
+let cliente2 = new Cliente('Marisol', 'Mora', 23, new Date());
+console.log(cliente2.toString());
