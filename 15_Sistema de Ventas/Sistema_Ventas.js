@@ -26,4 +26,16 @@ class Producto{
     set precio(precio){
         this._precio = precio;
     }
-}
+
+    toString(){
+        return `idProducto: ${this._idProducto}, 
+                nombre: ${this._nombre}, 
+                precio: Q${this._precio} `
+    }
+} 
+
+let producto1 = new Producto('Pantalon', 200);
+let producto2 = new Producto('camisa', 12);
+
+console.log(producto1.toString());
+console.log(producto2.toString());
