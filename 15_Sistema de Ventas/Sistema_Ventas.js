@@ -34,6 +34,42 @@ class Producto{
     }
 } 
 
+//Clase Orden
+class Orden{
+    static contadorOrdenes = 0;
+
+    static get MAX_PRODUCTOS(){
+        return 5;
+    }
+
+    constructor(){
+        this._idOrden = ++Orden.contadorOrdenes;
+        this._productos = [];
+        this._contadorProductosAgregados = 0;
+    }
+
+    get idOrden(){
+        return this._idOrden;
+    }
+
+    agregarProducto(producto){
+        if(this._productos.length < Orden.MAX_PRODUCTOS){
+            this._productos.push(producto);
+            //this._productos[this._contadorProductosAgregados++] = producto;
+        }
+        else{
+            console.log(`No se pueden agregar más productos: ${Orden.MAX_PRODUCTOS}`)
+        }
+    }
+
+    calcularTotal(){
+        
+    }
+
+}
+
+
+
 let producto1 = new Producto('Pantalon', 200);
 let producto2 = new Producto('camisa', 12);
 
