@@ -28,9 +28,7 @@ class Producto{
     }
 
     toString(){
-        return `idProducto: ${this._idProducto}, 
-                nombre: ${this._nombre}, 
-                precio: Q${this._precio} `
+        return `\n{idProducto: ${this._idProducto}, nombre: ${this._nombre}, precio: Q${this._precio} } `
     }
 } 
 
@@ -54,7 +52,7 @@ class Orden{
 
     agregarProducto(producto){
         if(this._productos.length < Orden.MAX_PRODUCTOS){
-            this._productos.push(producto);
+            this._productos.push(producto); //push() se Utiliza para agregar uno o más elementos al final de un array.  
             //this._productos[this._contadorProductosAgregados++] = producto;
         }
         else{
@@ -87,9 +85,23 @@ class Orden{
 
 let producto1 = new Producto('Pantalon', 200);
 let producto2 = new Producto('camisa', 12);
+let producto3 = new Producto('Calzon', 89);
+let producto4 = new Producto('Calzoncillo', 35);
+let producto5 = new Producto('Calzoncillo', 88);
+
 
 let orden1 = new Orden();
 orden1.agregarProducto(producto1);
 orden1.agregarProducto(producto2);
+orden1.agregarProducto(producto3);
+orden1.agregarProducto(producto3);
+orden1.agregarProducto(producto4);
+orden1.agregarProducto(producto5);
 
 orden1.mostrarOrden();
+
+let orden2 = new Orden();
+orden2.agregarProducto(producto1);
+orden2.agregarProducto(producto2);
+orden2.agregarProducto(producto3)
+orden2.mostrarOrden();
