@@ -142,3 +142,21 @@ let computadora1 = new Computadora('MiEquipo', monitor1, teclado1, raton1);
 console.log(computadora1.toString());
 //forma 2 templey String
 //console.log(`${computadora1}`)
+
+class Orden{
+    static contadorOrdenes = 0;
+    constructor(){
+        this._idOrden = ++Orden.contadorOrdenes;
+        this._computadoras = [];
+        this._contadorProductosAgregados = 0;
+    }
+
+    get idOrden(){
+        return this._idOrden;
+    }
+
+    agregarComputadora(computadora){
+        this._computadoras[this._contadorProductosAgregados++] = computadora;
+        //this._computadoras.push(computadora);
+    }
+}

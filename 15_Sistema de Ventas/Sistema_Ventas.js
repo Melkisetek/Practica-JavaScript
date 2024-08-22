@@ -53,6 +53,7 @@ class Orden{
     agregarProducto(producto){
         if(this._productos.length < Orden.MAX_PRODUCTOS){
             this._productos.push(producto); //push() se Utiliza para agregar uno o más elementos al final de un array.  
+            //Opcion 2
             //this._productos[this._contadorProductosAgregados++] = producto;
         }
         else{
