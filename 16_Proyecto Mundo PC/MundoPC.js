@@ -140,6 +140,7 @@ class Computadora{
 
 let computadora1 = new Computadora('MiEquipo', monitor1, teclado1, raton1);
 console.log(computadora1.toString());
+let computadora2 = new Computadora('PC',monitor2,teclado2,raton2 );
 //forma 2 templey String
 //console.log(`${computadora1}`)
 
@@ -156,7 +157,25 @@ class Orden{
     }
 
     agregarComputadora(computadora){
-        this._computadoras[this._contadorProductosAgregados++] = computadora;
+        this._computadoras[this._contadorProductosAgregados++] = computadora; //le pasamos una referencia y se esta asignando a un nuevo indice de computadoras
         //this._computadoras.push(computadora);
     }
+
+    mostrarOrden(){
+        let computadorasOrden = '';
+        //Cual es el arreglo que queremos iterar 
+        for(let computadora of this._computadoras){
+            computadorasOrden = computadorasOrden+`\n${computadora}`;
+        }
+        console.log(`Orden: ${this._idOrden}, Computadoras: ${computadorasOrden}`);
+    }
+
 }
+
+let orden1 = new Orden();
+let orden2 = new Orden();
+orden1.agregarComputadora(computadora1);
+orden2.agregarComputadora(computadora2);
+orden1.mostrarOrden();
+orden2.mostrarOrden();
+
