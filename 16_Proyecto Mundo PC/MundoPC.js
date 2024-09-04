@@ -109,7 +109,7 @@ class Monitor{
 
 let monitor1 = new Monitor('HP', 14);
 console.log(monitor1.toString());
-let monitor2 = new Monitor('Dell', '32');
+let monitor2 = new Monitor('Dell', 32);
 console.log(monitor2.toString());
 
 class Computadora{
@@ -138,7 +138,7 @@ class Computadora{
     }
 }
 
-let computadora1 = new Computadora('MiEquipo', monitor1, teclado1, raton1);
+let computadora1 = new Computadora('Dell', monitor1, teclado1, raton1); //recibe una referencia de cada una de los objetos monitor, raton, teclado
 console.log(computadora1.toString());
 let computadora2 = new Computadora('PC',monitor2,teclado2,raton2 );
 //forma 2 templey String
@@ -167,7 +167,7 @@ class Orden{
         for(let computadora of this._computadoras){
             computadorasOrden = computadorasOrden+`\n${computadora}`;
         }
-        console.log(`Orden: ${this._idOrden}, Computadoras: ${computadorasOrden}`);
+        console.log(`Orden: ${this._idOrden}, Computadoras: ${computadorasOrden}`); //computadoraOrden tiene todos los objetos de tipo computadora
     }
 
 }
