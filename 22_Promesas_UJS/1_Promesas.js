@@ -11,7 +11,7 @@ let miPromesa = new Promise((resolver, rechazar) =>{
 
 //Llamar la funcion promesa 
 //miPromesa.then(valor =>{console.log(valor)}, error =>{console.log(error)});
-//Forma 2
+//Forma 2 - Recomendada
 miPromesa
 .then(valor=>{console.log(valor)})
-.catch(error=>{console.log(error)});
+.catch(error=>{console.log(error)}); 
