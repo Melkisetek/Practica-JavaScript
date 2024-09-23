@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM</title>
+</head>
+<body>
+    <h1 id="cabecero">Manejo de DOM con JS</h1>
+    <p id="parrafo">Hola mundo con html</p>
+
+
+    <script>
+        console.log('¡Saludos!');
+        //el objeto document sirve para acceder a los elementos de html
+        let cabecero = document.getElementById('cabecero').innerHTML, //innerHTML: Se utiliza para acceder o modificar el contenido en HTML
+            parrafo = document.getElementById('parrafo').innerHTML;
+
+        console.log('valor cabecero: '+cabecero);
+        console.log('valor párrafo: '+parrafo);
+
+    </script>
+</body>
+</html>
