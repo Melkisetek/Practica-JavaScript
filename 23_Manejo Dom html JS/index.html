@@ -13,11 +13,15 @@
     <script>
         console.log('¡Saludos!');
         //el objeto document sirve para acceder a los elementos de html
-        let cabecero = document.getElementById('cabecero').innerHTML, //innerHTML: Se utiliza para acceder o modificar el contenido en HTML
-            parrafo = document.getElementById('parrafo').innerHTML;
+        let cabecero = document.getElementById('cabecero'), //innerHTML: Se utiliza para acceder o modificar el contenido en HTML
+             parrafo = document.getElementById('parrafo');
 
-        console.log('valor cabecero: '+cabecero);
-        console.log('valor párrafo: '+parrafo);
+        console.log('valor cabecero: '+cabecero.innerHTML);
+        console.log('valor párrafo: '+parrafo.innerHTML);
+
+        //Modificar valor
+        parrafo.innerHTML = 'Nuevo valor con innerHTML';
+        cabecero.innerHTML = 'Cambio de cabecero';
 
     </script>
 </body>

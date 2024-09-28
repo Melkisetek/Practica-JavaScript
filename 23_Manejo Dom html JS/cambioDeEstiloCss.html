@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JS</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo de DOM con JS</h1>
+    <button id="click" onclick="mostrar()">Mostar</button>
+    <br>
+    
+    <script>
+        let titulo = document.getElementById('titulo'),
+           click = document.getElementById('click') ;
+    //-- recomendada
+    /*
+        click.addEventListener('click', ()=>{
+        titulo.style.color = '#fa2a00';
+      })*/
+
+      function mostrar(){
+        titulo.style.color = '#fa79e2'
+      }
+    </script>
+</body>
+</html>

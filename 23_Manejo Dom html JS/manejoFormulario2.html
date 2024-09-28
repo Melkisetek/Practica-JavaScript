@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceder a elementos del formulario</title>
+</head>
+<body>
+    <form id="formulario">
+        nombre: <input type="text" name="nombre" value="Juan">
+        <br>
+        apellido: <input type="text" name="apellido" value="Perez">
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id="valores"></div>
+    <script>
+        let mostrarValores = ()=>{
+            //accedemos al formulario, luego asignamos en una variable formulario
+            let formulario = document.forms['formulario'];
+            // Para recorrer cada una de los elementos del formulario.
+            let texto = '';
+            //acceder a cada uno de los elementos del formulario.
+            let nombre = formulario['nombre'];
+            let apellido = formulario['apellido'];
+            //recuperar el valor 
+            texto = nombre.value+'<br/>'+apellido.value;
+            
+            //Se muestra en el doc HTML
+            document.getElementById('valores').innerHTML = texto;
+        }
+    </script>
+</body>
+</html>

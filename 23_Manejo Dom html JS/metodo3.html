@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="azul">Manejo de DOM con JS</h1>
+    <p class="azul">Hola mundo con html</p>
+    <p class="azul">Nuevo parrafo</p>
+    <script>
+        //Método querySelectorAll()
+        // Recupera el párrafo que tenga aplicado la clase azul.
+        let elementos = document.querySelectorAll('p.azul');
+        console.log(`No. elementos: ${elementos.length}`);
+
+        let incremento = 0;
+        //iteracion con forOf
+        // varible accede a un arreglo al arreglo elementos
+       for(let elemento of elementos){
+         console.log(`${incremento++} - ${elemento.innerHTML}`)
+       }
+    </script>
+    
+</body>
+</html>

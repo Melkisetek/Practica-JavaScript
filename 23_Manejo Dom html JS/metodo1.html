@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM</title>
+</head>
+<body>
+    <h1 id="cabecero">Manejo de DOM con JS</h1>
+    <p id="parrafo1">Hola mundo con html</p>
+    <p id="parrafo2">Nuevo parrafo</p>
+
+    <script>
+        //Método getElementsByTagName():
+        //Estamos accediendo a todos los elementos de una sola vez con este método.
+        let parrafo = document.getElementsByTagName('p'); 
+        console.log(`No. parrafos: ${parrafo.length}`);
+        //iterar 
+        for(let i = 0; i<parrafo.length;i++){
+            console.log(`i: ${i} - ${parrafo[i].innerHTML}`);
+        }
+    </script>
+</body>
+</html>

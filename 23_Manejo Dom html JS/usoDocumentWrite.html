@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JS</title>
+</head>
+<body>
+    <h1>Hola desde HTML con JS</h1>
+    <button onclick="mostrar()">registrar</button>
+    <br/>
+    <script>
+        // El método write() puede sobreescribir el doc, html tener esto en cuenta.
+        document.write('Hola desde JS')
+        function mostrar(){
+            document.write('Adios');
+        }
+    </script>
+</body>
+</html>

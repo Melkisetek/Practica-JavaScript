@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de formulario JS</title>
+</head>
+<body>
+    <form id="formulario">
+        nombre: <input type="text" name="nombre" value="Juan">
+        <br>
+        apellido: <input type="text" name="apellido" value="Perez">
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <div id="valores"></div>
+    <script>
+        let mostrarValores = ()=>{
+            //accedemos al formulario, luego asignamos en una variable formulario
+            let formulario = document.forms['formulario'];
+            // Para recorrer cada una de los elementos del formulario.
+            let texto = '';
+            for(let elemento of formulario){
+                // cada iteracion se guarda en la variable de texto.
+                texto += elemento.value + '<br/>';
+
+            }
+            //console.log(texto);
+            //Se muestra en el doc HTML
+            document.getElementById('valores').innerHTML = texto;
+        }
+    </script>
+</body>
+</html>
