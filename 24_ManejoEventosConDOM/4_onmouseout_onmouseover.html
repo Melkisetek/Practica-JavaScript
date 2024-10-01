@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JS</title>
+</head>
+<body>
+    <!--Pasar el cursor cambiar de color, quitar el cursor cambiar de color-->
+    <h1 id="titulo" onmouseover="rojo()" onmouseout="azul()">Manejo de DOM con JS</h1>
+    <br>
+    <script>
+    // ------ Eventos onmouseover y onmouseout ------
+        function rojo(){
+            let color = document.getElementById('titulo');
+            color.style.color = 'red';
+        }
+
+        function azul(){
+            let color = document.getElementById('titulo');
+            color.style.color = 'blue'
+        }
+    </script>
+</body>
+</html>

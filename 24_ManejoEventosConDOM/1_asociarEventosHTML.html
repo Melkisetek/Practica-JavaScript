@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menejo de DOM con JS</title>
+</head>
+<body>
+<h1 id="titulo">Manejo DOM con JS</h1>
+<br>
+<div id="mostrar"></div>
+    <script>
+        //------ Asociar Eventos a elementos a HTML ------
+        let titulo = document.getElementById('titulo').onclick = cambiarTexto; // apunta a una referencia de una función
+
+        // tipo CallBack
+        function cambiarTexto(){
+            document.getElementById('mostrar').innerHTML = 'Nuevo contenido'
+        }
+    </script>
+</body>
+</html>
