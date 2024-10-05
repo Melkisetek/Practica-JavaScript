@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JS</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo del DOM con JS</h1>
+    <br>
+    Nombre: <input type="text" id="nombre">
+    <br><br>
+    Apellido: <input type="text" id="apellido">
+    <script>
+        // ----- Funciones flechas con addEventListener ------
+        let nombre = document.getElementById('nombre'),
+            apellido = document.getElementById('apellido');
+        
+        nombre.addEventListener('focus', (evento)=>{
+            evento.target.style.background = 'pink'
+        });
+
+        nombre.addEventListener('blur', (evento)=>{
+            evento.target.style.background = 'none'
+        });
+
+        apellido.addEventListener('focus', cambiar);
+        apellido.addEventListener('blur', regresar);
+
+        function cambiar(evento){
+            evento.target.style.background = 'yellow';
+        }
+
+        function regresar(evento){
+            let componente = evento.target;
+            componente.style.background = 'none';
+               
+        }
+
+    
+
+    </script>
+</body>
+</html>

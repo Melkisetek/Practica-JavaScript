@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JS</title>
+</head>
+<body>
+    <h1>Manejo de DOM con JS</h1>
+    <br>
+    Nombre: <input type="text" id="nombre">
+    <br><br>
+    Apellido: <input type="text" id="apellido">
+
+    <script>
+        // --------- Método addEventListener --------
+        let nombre = document.getElementById('nombre');
+        nombre.addEventListener('focus', cambiar); // Se pasa la referencia, más no la llamada.
+        nombre.addEventListener('blur', regresar);
+        
+        let apellido = document.getElementById('apellido');
+        apellido.addEventListener('focus', cambiar); 
+        apellido.addEventListener('blur', regresar);
+
+        function cambiar(evento){
+            // target: hacer referencia al elemento que lanzo este evento.
+            let componente = evento.target;
+            componente.style.background = 'yellow';
+        }
+
+        function regresar(evento){
+            evento.target.style.background = 'none';
+        }
+    </script>
+</body>
+</html>

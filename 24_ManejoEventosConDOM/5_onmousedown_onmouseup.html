@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo de DOM con JS</title>
+</head>
+<body>
+    <!--Presionar clic izquierdo cambia de color, dejar de presionar clic izquierdo cambia a otro color-->
+    <h1 id="titulo" onmousedown="rojo()" onmouseup="azul()" onclick="verde()">
+        Manejo de DOM con JS
+     </h1>
+    <br>
+    <script>
+    // ------ Eventos onmousedown, onmouseup y onclick ------
+        function rojo(){
+            console.log('onmousedown cambio a rojo');
+            let color = document.getElementById('titulo');
+            color.style.color = 'red';
+        }
+
+        function azul(){
+            console.log('onmouseup cambio a azul');
+            let color = document.getElementById('titulo');
+            color.style.color = 'blue'
+        }
+
+        function verde(){
+            console.log('onclick cambio a verde');
+            let color = document.getElementById('titulo');
+            color.style.color = 'green';
+        }
+    </script>
+</body>
+</html>
