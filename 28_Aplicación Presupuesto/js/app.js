@@ -139,3 +139,28 @@ const eliminarEgreso = (id)=>{
     cargarEgresos();
 
 }
+
+let agregarDato = ()=>{
+    let forma = document.forms['forma'];
+    let tipo = forma['tipo'];
+    let descripcion = forma['descripcion'];
+    let valor = forma['valor'];
+
+    if(descripcion.value !== '' && valor.value !== ''){
+        if(tipo.value === 'ingreso'){
+            //realizar una conversion de tipo cadena a número utilizar number() |
+            //Sintaxis simplificada  +
+            ingresos.push(new Ingresos(descripcion.value, +valor.value));
+
+            cargarCabecero();
+            cargarIngresos();
+        }
+        else if(tipo.value === 'egreso'){
+            egresos.push(new Egresos(descripcion.value, +valor.value));
+
+            cargarCabecero();
+            cargarEgresos();
+        }
+    }
+    
+}
